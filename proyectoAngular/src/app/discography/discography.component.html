@@ -1,0 +1,17 @@
+<nav-bar>
+</nav-bar>
+<div class="jumbotron">
+  <h1>Discografía completa de  {{artistName}}</h1>
+  <h2>Listado</h2>
+  <button class="btn btn-success" [routerLink]="['../new-disc', {id: id, name: artistName}]">Nuevo Disco</button>
+</div>
+<div class="thumbnailcol-xs-6 col-md-3">
+  <h4>Total discos: {{filtered?.length}}</h4>
+  <input class="search-bar" placeholder="Search" (keyup)="search(input.value)" #input/>
+</div>
+<div class="container">
+  <div class="list">
+    <disc-list [disc]="filtered">
+    </disc-list>
+  </div>
+</div>

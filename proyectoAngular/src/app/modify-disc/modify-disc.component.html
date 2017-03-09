@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1>Modificación de {{discName}}</h1>
+  <h2>Datos</h2>
+</div>
+<div class="form-group col-xs-4">
+  <input type="text" placeholder="Nombre" [(ngModel)]="name"  class="form-control" #n>
+</div>
+<div class="col-xs-12"></div>
+<div class="form-group col-xs-4">
+  <input type="text" placeholder="Año"  [(ngModel)]="year" class="form-control" #a>
+</div>
+<div class="col-xs-12"></div>
+<div class="form-group col-xs-8">
+  <input type="url" placeholder="Url de la imagen"  [(ngModel)]="url" class="form-control" #u>
+</div>
+<div class="col-xs-12"></div>
+<div class="col-xs-4">
+  <a class="btn btn-primary" (click)="modifyDisc(id, n.value, a.value, u.value)" [routerLink]="['../discography', {id: artistId, name: artistName}]">Modificar Disco</a>
+</div>

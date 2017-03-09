@@ -1,0 +1,17 @@
+<nav-bar>
+</nav-bar>
+<div class="jumbotron">
+  <h1>Artistas y Discografía</h1>
+  <h2>Listado</h2>
+  <button [routerLink]="['../new-artist']" class="btn btn-success">Nuevo artista</button>
+</div>
+<div class="thumbnailcol-xs-6 col-md-3">
+  <h4>Total artistas:  {{filtered?.length}}</h4>
+  <input class="search-bar" placeholder="Search" (keyup)="search(input.value)" #input/>
+</div>
+<div class="container">
+  <div class="list">
+    <artist-list [artists]="filtered">
+    </artist-list>
+  </div>
+</div>

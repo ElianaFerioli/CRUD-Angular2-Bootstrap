@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1>Modificación de {{artistName}}</h1>
+  <h2>Datos</h2>
+</div>
+<div class="form-group col-xs-4">
+  <input type="text" placeholder="Nombre" [(ngModel)]="name"  class="form-control" #n>
+</div>
+<div class="col-xs-12"></div>
+<div class="form-group col-xs-4">
+  <input type="text" placeholder="Compania"  [(ngModel)]="company" class="form-control" #c>
+</div>
+<div class="col-xs-12"></div>
+<div class="form-group col-xs-8">
+  <input type="url" placeholder="Url de la imagen"  [(ngModel)]="url" class="form-control" #u>
+</div>
+<div class="col-xs-12"></div>
+<div class="col-xs-4">
+  <a class="btn btn-primary" (click)="modifyArtist(id, n.value, c.value, u.value)" [routerLink]="['../home']">Modificar Artista</a>
+</div>
